@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hello"
+version = "0.1.0"
+description = ""
+authors = ["edelagnier <erica.delagnier@multi.coop>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+pillow = "^10.4.0"
+connexion = {extras = ["swagger-ui", "uvicorn"], version = "^3.1.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hello = "hello:main"

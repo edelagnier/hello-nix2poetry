@@ -1,0 +1,22 @@
+openapi: "3.0.0"
+info:
+  version: "1.0.0"
+  title: API Hello
+  description: API for the Hello project
+paths:
+  /greeting/{name}:
+    post:
+      operationId: run.post_greeting
+      responses:
+        200:
+          description: "Greeting response"
+          content:
+            text/plain:
+              schema:
+                type: string
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
